@@ -79,6 +79,11 @@
       cursor: pointer;
       background-color:aliceblue;
     }
+
+    .col {
+      border-bottom: 1px solid rgba(121, 121, 121, 0.55); 
+      
+    }
     
     #wheel {
       display: flex;
@@ -87,8 +92,6 @@
     #wheel:hover {
       cursor: pointer;
     }
-
-  
 
   </style>
  
@@ -168,31 +171,36 @@
               <div class="opt">
                 <span id="wheel">&#9881;</span>
               </div>
-              <hr>
               
               
-              <!-- Rows with emails -->
+              
+            <!-- Rows with emails -->
+            
               <div class="row" id="rows">
                 <div class="col"> <input type="checkbox" value='1'> <b> Alfred Pennyworth </b>
                   <br>
                   <p>Good Evening Mr. Mama, I have a very important...</p>
                 </div>
-                <hr>
+                </div>
+                
                 <div class="row" id="rows">
                   <div class="col"> <input type="checkbox" value='1'> <b> Henri Ducard </b>
                     <br>
                     <p>Hey Joe, I have been trying to reach you about your car...</p>
                   </div>
-                    <hr>
+                  </div>
+                    
                   <div class="row" id="rows">
                     <div class="col"> <input type="checkbox" value='1'> <b> Carmine Falcone </b>
                       <br>
                       <p>Dear Joe, I wrote you but you're still not calling. I left my cell...</p>
                     </div>
-                    <hr>
                     </div>
-                    </div>
-              </div>
+                    
+                    
+                    
+             
+            
   
               <!-- Pagination bar-->
               <nav aria-label="Page navigation example">
@@ -217,7 +225,6 @@
 
               </div>
          
-          
           <!-- Right Column -->
           <div class="col-md-6">
             <!-- Message being read -->
@@ -227,9 +234,9 @@
             </div>
             <hr>
             <!-- Message body -->
-            <p>Good Evening Mr. Mama, I have a very important message for you and your family.</p>
+            <p>Good evening Mr. Mama, I have a very important message for you and your family.</p>
               <p>Please give me a call at (555)-555-5555 as soon as you possible can. </p>
-               Best Regards, <br>
+               Best regards, <br>
                Alfred. 
               <hr>
             </p>
