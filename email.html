@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Email</title>
+  </head>
+  
+  <style>
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius:50%;
+      margin-top: 15px;
+      
+    }
+
+    .alf {
+      width: 150px;
+      height: 150px;
+      border-radius:50%;
+      margin-top: 15px;
+    }
+    
+    h4 {
+      font-size: 30px;
+    }
+    h6 {
+      text-align: center;
+      padding: 35px;
+      padding-top: 15px;
+    }
+
+    h2 {
+      text-align: center;
+      padding:15px;
+    }
+
+    .d-grid.gap-2 {
+      box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.75);
+    }
+
+    #buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;      
+    }
+
+    .btn.btn-primary.position-relative {
+      box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+      width: 145px;
+      align-self: center;
+      position: absolute;      
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+    .reply-box {
+      display: flex;
+    }
+
+    #reply {
+      display: flex;
+      align-self: flex-end;
+    }
+
+    #rows {
+      padding:15px;
+    }
+    .col:hover {
+      cursor: pointer;
+      background-color:aliceblue;
+    }
+    
+    #wheel {
+      display: flex;
+      justify-content: end;
+    }
+    #wheel:hover {
+      cursor: pointer;
+    }
+
+  
+
+  </style>
+ 
+  <body>
+    
+    <!-- Left Column -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" style="background-color:aqua"> 
+                
+                <!-- Welcome line-->
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
+                <h6> Welcome, Joe!</h6>
+                    
+                <!-- Compose button -->
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-warning">Compose <i class='fa-solid fa-pen-to-square'></i></button> 
+                </div> 
+                
+                <!-- Inbox Buttons -->
+                
+                <h1 id="buttons" style="padding:35px">
+                  <!-- Inbox -->
+                  <button type="button" class="btn btn-primary position-relative" data-toggle="tooltip" data-placement="right" title="Inbox">
+                    Inbox &#128231;
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    10
+                    </span>
+                    <span class="visually-hidden">unread messages</span>
+                  </button>
+
+                  <!-- Sent -->
+                  <button class="btn btn-primary position-relative" type="button" data-toggle="tooltip" data-placement="right" title="Sent Mail">
+                    Sent Mail <i class="fa-solid fa-paper-plane"></i></button>                   
+                  
+                  <!-- Important -->
+                  <button class="btn btn-primary position-relative" type="button" data-toggle="tooltip" data-placement="right" title="Important">
+                    Important &#11088;
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    40
+                  <span class="visually-hidden">unread messages
+                  </span></button>
+                  
+                  <!-- Spam -->
+
+                  <button class="btn btn-primary position-relative" type="button" data-toggle="tooltip" data-placement="right" title="Spam">
+                    Spam &#9746;
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      99+
+                    <span class="visually-hidden">unread messages
+                    </span></button>
+                    </button>
+
+                  <!-- Trash -->
+                  <button class="btn btn-primary position-relative" type="button" data-toggle="tooltip" data-placement="right" title="Trash">
+                    Trash <i class="fa fa-trash-o"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                  </span>
+                  <span class="visually-hidden">unread messages
+                  </span> 
+                  </button> 
+                </h1>
+              
+            </div>
+          
+          <!-- Middle Column -->
+          <div class="col-md-3" style="background-color:#edeadf">
+            
+            <!-- Search bar -->
+            <form class="d-flex"">
+                <input class="form-control me-2" type="search" placeholder="Search emails" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <!-- Title with options-->
+              <h2>Inbox</h2>
+              <div class="opt">
+                <span id="wheel">&#9881;</span>
+              </div>
+              <hr>
+              
+              
+              <!-- Rows with emails -->
+              <div class="row" id="rows">
+                <div class="col"> <input type="checkbox" value='1'> <b> Alfred Pennyworth </b>
+                  <br>
+                  <p>Good Evening Mr. Mama, I have a very important...</p>
+                </div>
+                <hr>
+                <div class="row" id="rows">
+                  <div class="col"> <input type="checkbox" value='1'> <b> Henri Ducard </b>
+                    <br>
+                    <p>Hey Joe, I have been trying to reach you about your car...</p>
+                  </div>
+                    <hr>
+                  <div class="row" id="rows">
+                    <div class="col"> <input type="checkbox" value='1'> <b> Carmine Falcone </b>
+                      <br>
+                      <p>Dear Joe, I wrote you but you're still not calling. I left my cell...</p>
+                    </div>
+                    <hr>
+                    </div>
+                    </div>
+              </div>
+  
+              <!-- Pagination bar-->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              </div>
+         
+          
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <!-- Message being read -->
+            <div class="mail-head">
+            <h4><img src="https://metro.co.uk/wp-content/uploads/2018/03/michael-caine-025-michael-caine-c2ae-raymi-hero-productions-2017-photo-by-jeff-spicer-e1564489766704.jpg?quality=90&strip=all&zoom=1&resize=644%2C546" alt="Alfred" class="alf">
+             <b>Alfred Pennyworth</b></h4>
+            </div>
+            <hr>
+            <!-- Message body -->
+            <p>Good Evening Mr. Mama, I have a very important message for you and your family.</p>
+              <p>Please give me a call at (555)-555-5555 as soon as you possible can. </p>
+               Best Regards, <br>
+               Alfred. 
+              <hr>
+            </p>
+
+            <!--Reply box -->
+            <div class="reply-box">
+            <textarea id="w3review" name="w3review" rows="4" cols="50">
+                </textarea>
+                <button  id="reply" style="width: 75px; height:50px" type="button" class="btn btn-success">Reply &#8594;</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
